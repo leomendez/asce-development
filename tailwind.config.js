@@ -9,16 +9,19 @@ const powderBlue = '#A8DADC';
 module.exports = {
   content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
-  purge: ['./src/**/*.tsx'],
   theme: {
     typography: (theme) => ({}),
     extend: {
       colors: {
-        'asce-oxfordBlue': oxfordBlue,
-        'asce-powderBlue': powderBlue,
-        'asce-imperialRed': imperialRed,
-        'asce-charcoal': charcoal,
-        'asce-honeydew': honeydew,
+        'asce-bg-dark': oxfordBlue,
+        'asce-secondary-dark': powderBlue,
+        'asce-primary-dark': charcoal,
+        'asce-font-dark': honeydew,
+        'asce-bg': honeydew,
+        'asce-aux': imperialRed,
+        'asce-secondary': charcoal,
+        'asce-primary': powderBlue,
+        'asce-font': oxfordBlue,
       },
     },
   },
