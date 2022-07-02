@@ -12,7 +12,7 @@ export default function Navbar({}: Props) {
   const icon = useMemo(() => (theme === 'dark' ? <MdDarkMode /> : <MdLightMode />), [theme]);
 
   return (
-    <div className="flex justify-between items-center p-6">
+    <div className="flex justify-between items-center py-6 px-10">
       <div className="text-2xl font-semibold border-b-4 hover:border-asce-aux border-transparent transition-all">
         <Link href="/">
           <a className="flex gap-2 justify-center items-center">
