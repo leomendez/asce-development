@@ -15,7 +15,7 @@ export default function Projects({}: Props) {
             target="_blank"
           >
             <div className='border-2 rounded-md p-4 m-2 h-32'>Image placeholder</div>
-            <div className="px-4 py-2 font-medium">NextJS + Styled Compoents</div>
+            <div className="px-4 py-2 font-medium">NextJS + Styled Components</div>
             <div className="p-4">Football website with stats about all football leagues in the world</div>
             <div className="border-y-2 w-full py-2 px-4 flex justify-between items-center font-semibold border-asce-primary">
               Asce Football <ImNewTab />
