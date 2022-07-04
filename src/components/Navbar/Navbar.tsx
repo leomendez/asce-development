@@ -13,7 +13,7 @@ export default function Navbar({}: Props) {
 
   return (
     <div className="flex justify-between items-center py-6 px-10">
-      <div className="text-2xl font-semibold border-b-4 hover:border-asce-aux border-transparent transition-all">
+      <div className="text-2xl font-semibold underline-animation">
         <Link href="/">
           <a className="flex gap-2 justify-center items-center">
             <Image src="/icon.png" alt="icon" width="20px" height="20px" className="dark:invert" />
@@ -21,12 +21,12 @@ export default function Navbar({}: Props) {
           </a>
         </Link>
       </div>
-      <div className="flex justify-between items-center gap-8 text-xl">
+      <div className="flex justify-between items-center gap-8 text-lg">
         <Link href="/projects">
-          <a className=" border-b-4 hover:border-asce-aux border-transparent transition-all font-medium">Projects</a>
+          <a className="underline-animation font-medium">Projects</a>
         </Link>
         <Link href="/">
-          <a className=" border-b-4 hover:border-asce-aux border-transparent transition-all font-medium">Home</a>
+          <a className="underline-animation font-medium">Home</a>
         </Link>
         <button
           className="shadow-sm border-asce-font dark:border-asce-font-dark border-2 rounded-full p-2 hover:opacity-70 text-sm"

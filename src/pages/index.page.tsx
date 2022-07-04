@@ -16,10 +16,10 @@ export default function Home() {
         </div>
         <Image src="/dev-logo-svg.svg" alt="logo" width="500px" height="200px" className="dark:invert" />
       </div>
-      <div className="text-3xl w-full flex items-center justify-center pt-52 gap-2 px-10 sm:px-4 flex-col sm:flex-row text-center">
+      <div className="text-3xl w-full flex items-center justify-center pt-40 sm:pt-52 gap-2 px-10 sm:px-4 flex-col sm:flex-row text-center">
         Feel free to explore my{' '}
         <Link href="/projects">
-          <a className="font-semibold border-b-4 hover:border-asce-aux border-transparent">Projects</a>
+          <a className="font-semibold underline-animation">Projects</a>
         </Link>
       </div>
     </div>
