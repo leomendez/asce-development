@@ -25,6 +25,9 @@ export default function Navbar({}: Props) {
         <Link href="/projects">
           <a className=" border-b-4 hover:border-asce-aux border-transparent transition-all font-medium">Projects</a>
         </Link>
+        <Link href="/">
+          <a className=" border-b-4 hover:border-asce-aux border-transparent transition-all font-medium">Home</a>
+        </Link>
         <button
           className="shadow-sm border-asce-font dark:border-asce-font-dark border-2 rounded-full p-2 hover:opacity-70 text-sm"
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

@@ -10,12 +10,16 @@ export default function Projects({}: Props) {
       <div className="pt-6">
         <Link href="https://football.asce-dev.com" target="_blank">
           <a
-            className="shadow-sm flex p-2 w-64 hover:shadow-asce-aux shadow-asce-secondary-dark cursor-pointer 
-                        flex-col rounded-lg"
+            className="shadow-md flex p-2 w-64 hover:shadow-asce-aux shadow-asce-primary-dark cursor-pointer 
+                        flex-col rounded-lg bg-asce-primary-dark bg-opacity-60"
             target="_blank"
           >
-            <div className="border-b-2 w-full px-2 pt-2 flex justify-between items-center font-semibold border-asce-primary">Asce Football <ImNewTab /></div>
-            <div className="p-2">Football website with stats about all football leagues in the world</div>
+            <div className='border-2 rounded-md p-4 m-2 h-32'>Image placeholder</div>
+            <div className="px-4 py-2 font-medium">NextJS + Styled Compoents</div>
+            <div className="p-4">Football website with stats about all football leagues in the world</div>
+            <div className="border-y-2 w-full py-2 px-4 flex justify-between items-center font-semibold border-asce-primary">
+              Asce Football <ImNewTab />
+            </div>
           </a>
         </Link>
       </div>
