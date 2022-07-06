@@ -51,7 +51,7 @@ export default function Navbar({}: Props) {
           </Link>
           <button
             className={
-              'shadow-sm border-asce-font dark:border-asce-font-dark border-2 rounded-full p-2 ml-6 ' +
+              'shadow-sm border-asce-font dark:border-asce-font-dark border-2 rounded-full p-2 sm:ml-6 ' +
               'hover:opacity-70 text-sm flex justify-center items-center gap-2'
             }
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
