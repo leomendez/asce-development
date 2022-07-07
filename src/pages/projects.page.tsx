@@ -26,8 +26,6 @@ export default function Projects({}: Props) {
                 height="124px"
               />
             </div>
-            {/* TODO - use screenshot of home page */}
-
             <div className="px-4 py-2 font-medium">NextJS + Styled Components</div>
             <div className="p-4">Football website with stats about all football leagues in the world</div>
             <div className="border-y-2 w-full py-2 px-4 flex justify-between items-center font-semibold border-asce-primary">

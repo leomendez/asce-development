@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex w-full justify-between pt-32 px-10 sm:px-20 sm:flex-row flex-col-reverse gap-10 sm:gap-2">
+      <div className="flex w-full justify-between pt-24 px-10 sm:px-20 sm:flex-row flex-col-reverse gap-10 sm:gap-2 xl:px-64 3xl:px-96">
         <div className="text-xl flex flex-col gap-2">
           <h2 className="text-3xl my-4 font-semibold">Hi, I am Leo Mendez 👋 </h2>
           <p>Software Developer 🖥 </p>
@@ -16,7 +16,8 @@ export default function Home() {
         </div>
         <Image src="/dev-logo-svg.svg" alt="logo" width="500px" height="200px" className="dark:invert" />
       </div>
-      <div className="text-3xl w-full flex items-center justify-center pt-40 sm:pt-52 gap-2 px-10 sm:px-4 flex-col sm:flex-row text-center">
+      <div className="text-3xl w-full flex items-center justify-center pt-16 pb-10 sm:pt-52 gap-2 px-10 sm:px-4 
+        flex-col sm:flex-row text-center">
         Feel free to explore my{' '}
         <Link href="/projects">
           <a className="font-semibold underline-animation">Projects</a>
