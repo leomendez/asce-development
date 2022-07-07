@@ -6,6 +6,9 @@ const nextConfig = {
     defaultLocale: 'en',
   },
   pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  images: {
+    domains: ['vercel.com'],
+  },
 };
 
 module.exports = nextConfig;

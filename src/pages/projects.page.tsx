@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ImNewTab } from 'react-icons/im';
 
 type Props = {};
@@ -6,7 +7,9 @@ type Props = {};
 export default function Projects({}: Props) {
   return (
     <div className="px-10 pt-4">
-      <h1 className="text-3xl font-bold w-full border-b-2 pb-2 dark:border-asce-font-dark border-asce-font">Projects</h1>
+      <h1 className="text-3xl font-bold w-full border-b-2 pb-2 dark:border-asce-font-dark border-asce-font">
+        Projects
+      </h1>
       <div className="pt-6">
         <Link href="https://football.asce-dev.com" target="_blank">
           <a
@@ -14,7 +17,17 @@ export default function Projects({}: Props) {
                         flex-col rounded-lg bg-opacity-60 hover:scale-105 transition-all"
             target="_blank"
           >
-            <div className='border-2 rounded-md p-4 m-2 h-32 border-asce-primary border-opacity-40'>Image placeholder</div>
+            <div className="border-2 rounded-md m-2 h-32 border-asce-primary border-opacity-80">
+              <Image
+                className="rounded-md"
+                alt="Preview Screenshot of www.asce-dev.com"
+                src="/asce-football-screen.png"
+                width="220px"
+                height="124px"
+              />
+            </div>
+            {/* TODO - use screenshot of home page */}
+
             <div className="px-4 py-2 font-medium">NextJS + Styled Components</div>
             <div className="p-4">Football website with stats about all football leagues in the world</div>
             <div className="border-y-2 w-full py-2 px-4 flex justify-between items-center font-semibold border-asce-primary">
