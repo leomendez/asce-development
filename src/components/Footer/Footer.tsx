@@ -11,7 +11,7 @@ export default function Footer({}: Props) {
     >
       <div className="flex gap-4 duration-150 pb-2 text-2xl">
         <a
-          href="https:github.com/leomendez"
+          href="https://github.com/leomendez"
           className="transition-all duration-150 hover:opacity-80 hover:scale-125"
           target="_blank"
         >
