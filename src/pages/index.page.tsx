@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div>
       <div className="flex w-full justify-between pt-24 px-10 sm:px-20 sm:flex-row flex-col-reverse gap-10 sm:gap-2 xl:px-64 3xl:px-96">
-        <div className="text-xl flex flex-col gap-2">
-          <h2 className="text-3xl my-4 font-semibold">Hi, I am Leo Mendez 👋 </h2>
+        <div className="text-xl flex flex-col gap-2 min-w-[240px]">
+          <h2 className="text-3xl my-4 font-semibold">Hi, I am Leo 👋 </h2>
           <p>Software Developer 🖥 </p>
           <p>React Enthusiast ⚛ </p>
           <p>Tennis Player 🎾 </p>
