@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next {
+  @apply h-full flex flex-col justify-between
+}
+
 .underline-animation {
   display: inline-block;
   position: relative;
