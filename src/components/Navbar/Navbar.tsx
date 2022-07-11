@@ -39,6 +39,16 @@ export default function Navbar({}: Props) {
               Projects
             </a>
           </Link>
+          <Link href="/blog">
+            <a
+              className={
+                'underline-animation font-medium border-b w-full sm:border-b-0 sm:border-r sm:px-6 sm:pb-0 pb-6 ' +
+                'border-asce-font dark:border-asce-font-dark'
+              }
+            >
+              Blog
+            </a>
+          </Link>
           <Link href="/">
             <a
               className={

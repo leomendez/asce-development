@@ -8,7 +8,7 @@ type Props = {};
 
 export default function Projects({}: Props) {
   return (
-    <div className="px-10 pt-4 pb-10">
+    <div className="p-10 h-full w-full ">
       <h1 className="text-3xl font-bold w-full border-b-2 pb-2 dark:border-asce-font-dark border-asce-font">
         Projects
       </h1>
