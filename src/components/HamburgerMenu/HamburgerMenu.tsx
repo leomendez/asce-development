@@ -9,7 +9,10 @@ type Props = {
 export default function HamburgerMenu({ children, navOpen, setNavOpen }: Props) {
   return (
     <>
-      <div className={`w-full h-[92%] absolute top-16 left-0 ${navOpen ? ' backdrop-blur-sm z-10' : ' -z-10'}`} />
+      <div
+        className={`w-full h-[92%] absolute top-16 left-0 ${navOpen ? ' backdrop-blur-sm z-10' : ' -z-10'}`}
+        onClick={() => setNavOpen(false)}
+      />
       <div
         className={`absolute text-lg transition-all duration-300 top-16 right-0 sm:relative 
             sm:visible sm:top-0 sm:w-auto sm:gap-6 h-[92%] sm:h-auto

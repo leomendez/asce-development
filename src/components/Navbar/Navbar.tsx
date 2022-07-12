@@ -26,42 +26,42 @@ export default function Navbar({}: Props) {
       <HamburgerMenu navOpen={navOpen} setNavOpen={setNavOpen}>
         <div
           className={`flex-col text-center sm:flex-row sm:visible sm:top-0 sm:w-auto sm:h-auto sm:flex
-            gap-6 sm:gap-0
+            gap-6 sm:gap-8 text-base
             ${navOpen ? ' flex items-center' : 'w-0 hidden'}`}
         >
           <Link href="/projects">
             <a
               className={
-                'underline-animation font-medium border-b w-full sm:border-b-0 sm:border-r sm:px-6 sm:pb-0 pb-6 ' +
+                'font-medium w-full sm:pb-0 pb-6 sm:flex sm:items-center ' +
                 'border-asce-font dark:border-asce-font-dark'
               }
             >
-              Projects
+              <span className="underline-animation">Projects</span>
             </a>
           </Link>
           <Link href="/blog">
             <a
               className={
-                'underline-animation font-medium border-b w-full sm:border-b-0 sm:border-r sm:px-6 sm:pb-0 pb-6 ' +
+                'font-medium w-full sm:pb-0 pb-6 sm:flex sm:items-center ' +
                 'border-asce-font dark:border-asce-font-dark'
               }
             >
-              Blog
+              <span className="underline-animation">Blog</span>
             </a>
           </Link>
           <Link href="/">
             <a
               className={
-                'underline-animation font-medium border-b w-full sm:border-b-0 sm:border-r sm:px-8 sm:pb-0 pb-6 ' +
+                'font-medium w-full sm:pb-0 pb-6 sm:flex sm:items-center ' +
                 'border-asce-font dark:border-asce-font-dark'
               }
             >
-              Home
+              <span className="underline-animation">Home</span>
             </a>
           </Link>
           <button
             className={
-              'shadow-sm border-asce-font dark:border-asce-font-dark border-2 rounded-full p-2 sm:ml-6 ' +
+              'shadow-sm border-asce-font dark:border-asce-font-dark border-2 rounded-full p-2 sm:ml-2 ' +
               'hover:opacity-70 text-sm flex justify-center items-center gap-2'
             }
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
