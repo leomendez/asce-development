@@ -19,11 +19,21 @@ export default function Blog({ posts }: Props) {
   return (
     <div className="p-10 h-full w-full">
       <h1 className="text-3xl font-bold w-full border-b-2 pb-2 dark:border-asce-font-dark border-asce-font">Blog</h1>
-      {posts.map((post) => (
-        <div key={post.slug}>
-          <Link href={`/blog/posts/${post.slug}`}>{post.frontmatter?.title}</Link>
-        </div>
-      ))}
+      <div className="flex flex-wrap pt-8">
+        {posts.map((post) => (
+          <div
+            key={post.slug}
+            className="flex flex-col shadow-sm shadow-asce-primary-dark rounded-md min-w-[300px] hover:scale-105 transition-all"
+          >
+            <Link href={`/blog/posts/${post.slug}`}>
+              <a>
+                <div className="w-full h-40 border rounded-md">Image Place holder</div>
+                <div className="p-4 h-24 font-semibold">{post.frontmatter?.title}</div>
+              </a>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

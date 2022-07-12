@@ -41,7 +41,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(postPath);
-  console.log({ files });
 
   const paths = files.map((fileName) => ({
     params: {
