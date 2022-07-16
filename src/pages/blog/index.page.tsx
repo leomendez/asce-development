@@ -27,7 +27,15 @@ export default function Blog({ posts }: Props) {
           >
             <Link href={`/blog/posts/${post.slug}`}>
               <a>
-                <div className="w-full h-40 border rounded-md">Image Place holder</div>
+                <div className="w-full h-40 rounded-md">
+                  <Image
+                    className="rounded-md"
+                    src="/blog/hello-world/hello-world.jpg"
+                    width="300px"
+                    height="160px"
+                    layout="responsive"
+                  />
+                </div>
                 <div className="p-4 h-24 font-semibold">{post.frontmatter?.title}</div>
               </a>
             </Link>

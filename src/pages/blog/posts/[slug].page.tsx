@@ -15,7 +15,7 @@ const postPath = join(process.cwd(), 'src/_posts');
 
 export default function Posts({ frontmatter, content }: Props) {
   return (
-    <div className="h-full prose mx-auto p-10">
+    <div className="h-full w-full prose p-10 dark:prose-invert">
       <h1>{frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
     </div>

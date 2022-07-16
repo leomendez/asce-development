@@ -7,4 +7,6 @@ tags:
   - nextjs
 ---
 
-# Hello World
+## Testing
+
+This is my first blog post using Next JS 🎊
