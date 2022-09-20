@@ -8,11 +8,11 @@ type Props = {};
 
 export default function Projects({}: Props) {
   return (
-    <div className="p-10 h-full w-full ">
+    <div className="p-10 h-full w-full mb-32">
       <h1 className="text-3xl font-bold w-full border-b-2 pb-2 dark:border-asce-font-dark border-asce-font">
         Projects
       </h1>
-      <div className="pt-8 flex gap-8 justify-center flex-col sm:flex-row">
+      <div className="pt-8 flex gap-8 justify-start flex-col sm:flex-row">
         <ProjectCard
           content="Football website with stats about all football leagues in the world"
           title="Typescript + NextJS + Styled Components"

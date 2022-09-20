@@ -17,7 +17,7 @@ type Props = {
 
 export default function Blog({ posts }: Props) {
   return (
-    <div className="p-10 h-full w-full">
+    <div className="p-10 h-full w-full mb-32">
       <h1 className="text-3xl font-bold w-full border-b-2 pb-2 dark:border-asce-font-dark border-asce-font">Blog</h1>
       <div className="flex flex-wrap pt-8">
         {posts.map((post) => (

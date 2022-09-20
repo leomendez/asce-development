@@ -6,7 +6,7 @@ export default function Document() {
       <Head />
       <body
         className="bg-asce-bg dark:bg-asce-bg-dark text-asce-font dark:text-asce-font-dark transition-all
-        h-full"
+        h-full m-auto max-w-7xl"
       >
         <Main />
         <NextScript />
