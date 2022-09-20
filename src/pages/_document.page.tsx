@@ -5,7 +5,7 @@ export default function Document() {
     <Html className="h-full">
       <Head />
       <body
-        className="bg-asce-bg dark:bg-asce-bg-dark text-asce-font dark:text-asce-font-dark transition-all
+        className="bg-asce-bg/50 dark:bg-asce-bg-dark/75 text-asce-font dark:text-asce-font-dark transition-all
         h-full m-auto max-w-7xl"
       >
         <Main />
