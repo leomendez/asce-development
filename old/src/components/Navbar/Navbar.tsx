@@ -17,10 +17,7 @@ export default function Navbar({}: Props) {
     <div className="flex justify-between items-center py-6 px-10">
       <div className="text-2xl font-semibold underline-animation">
         <Link href="/">
-          <a className="flex gap-2 justify-center items-center">
-            <Image src="/icon.png" alt="icon" width="20px" height="20px" className="dark:invert" />
-            Asce Development
-          </a>
+            <Image src="/icon.png" alt="icon" width={20} height={20} className="dark:invert" />
         </Link>
       </div>
       <HamburgerMenu navOpen={navOpen} setNavOpen={setNavOpen}>
