@@ -1,9 +1,16 @@
+'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle } from 'react-icons/ai';
 
 export const Footer = () => {
   return (
-    <div className="text-teal-600 w-full flex flex-col items-center p-4 bottom-0 justify-center text-sm">
+    <motion.div
+      className="text-teal-600 w-full flex flex-col items-center p-4 bottom-0 justify-center text-sm"
+      initial={{ opacity: 0, x: -400 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, ease: 'easeInOut' }}
+    >
       <div className="flex gap-24 duration-150 pb-2 text-2xl">
         <a
           href="https://github.com/leomendez"
@@ -28,6 +35,6 @@ export const Footer = () => {
         </a>
       </div>
       <div>&copy; Copyright {new Date().getFullYear()}, Leo Mendez</div>
-    </div>
+    </motion.div>
   );
 };
