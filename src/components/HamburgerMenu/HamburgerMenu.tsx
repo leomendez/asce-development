@@ -10,7 +10,7 @@ export default function HamburgerMenu({ children, navOpen, setNavOpen }: Props) 
   return (
     <>
       <div
-        className={`w-full h-[92%] absolute top-16 left-0 ${navOpen ? ' backdrop-blur-sm z-10' : ' -z-10'}`}
+        className={`w-full h-[92%] absolute top-24 left-0 ${navOpen ? ' backdrop-blur-sm z-10' : ' -z-10'}`}
         onClick={() => setNavOpen(false)}
       />
       <div
@@ -21,18 +21,18 @@ export default function HamburgerMenu({ children, navOpen, setNavOpen }: Props) 
       >
         {children}
       </div>
-      <button className="sm:hidden flex flex-col gap-1" onClick={() => setNavOpen((prev) => !prev)}>
+      <button className="sm:hidden flex flex-col gap-2 items-end" onClick={() => setNavOpen((prev) => !prev)}>
         <span
-          className={`w-4 h-0.5 bg-teal-600 transition-all duration-200
-            ${navOpen && 'rotate-45 translate-y-1'}`}
+          className={`h-0.5 bg-teal-600 transition-all duration-200
+            ${navOpen ? 'rotate-45 translate-y-1 w-4' : 'w-8'}`}
         />
         <span
-          className={`w-4 h-0.5 bg-teal-600 transition-all duration-200
+          className={`w-6 h-0.5 bg-teal-600 transition-all duration-200
             ${navOpen && 'hidden'}`}
         />
         <span
           className={`w-4 h-0.5 bg-teal-600 transition-all duration-200
-            ${navOpen && '-rotate-45 -translate-y-0.5'}`}
+            ${navOpen && '-rotate-45 -translate-y-1.5'}`}
         />
       </button>
     </>
