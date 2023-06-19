@@ -13,12 +13,11 @@ type Props = {
   tags: string[];
 };
 
-export const ProjectCard = ({ href, content, imageSrc, title, tags }: Props) => {
+export const BlogCard = ({ href, content, imageSrc, title, tags }: Props) => {
   return (
     <Link
       className="flex items-center md:flex-row flex-col gap-8 group hover:cursor-pointer hover:bg-opacity-10 hover:bg-slate-400 p-4"
       href={href}
-      target="_blank"
     >
       <Image
         src={imageSrc}
@@ -30,7 +29,6 @@ export const ProjectCard = ({ href, content, imageSrc, title, tags }: Props) => 
       <div className="flex flex-col gap-4 h-full justify-center">
         <h2 className="text-lg font-bold group-hover:text-teal-600 flex gap-2 items-center">
           {title}
-          <AiOutlineArrowUp className="rotate-45 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 duration-200" />
         </h2>
         <p className="text-slate-400 leading-2">{content}</p>
         <motion.div
