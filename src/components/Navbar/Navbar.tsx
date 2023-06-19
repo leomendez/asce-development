@@ -29,7 +29,7 @@ export const Navbar = () => {
         >
           <NavItem href="/projects" title="Projects" />
           <NavItem href="/blog" title="Blog" />
-          <NavItem href="/Contact" title="Contact" />
+          <NavItem href="/contact" title="Contact" />
         </div>
       </HamburgerMenu>
     </div>

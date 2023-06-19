@@ -17,13 +17,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={
-          roboto.className +
-          ' bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 transition-all h-full m-auto max-w-7xl'
-        }
-      >
-        <div className="relative flex flex-col justify-between h-full">
+      <body className={roboto.className + ' bg-slate-800 text-slate-300 transition-all h-full m-auto max-w-7xl'}>
+        <div className="relative flex flex-col justify-between h-full overflow-hidden">
           <Navbar />
           {children}
           <Footer />
