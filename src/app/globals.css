@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-#__next {
-  @apply h-full flex flex-col justify-between
+html {
+  height: 100%;
 }
 
 .underline-animation {
@@ -19,7 +19,7 @@
   height: 3px;
   bottom: 0;
   left: 0;
-  @apply bg-asce-aux;
+  @apply bg-teal-600;
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
 }
@@ -27,4 +27,8 @@
 .underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.pink-logo {
+  filter: invert(11%) sepia(42%) saturate(6952%) hue-rotate(332deg) brightness(103%) contrast(96%);
 }

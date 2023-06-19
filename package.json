@@ -1,34 +1,36 @@
 {
+  "name": "asce-development",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "lint": "next lint"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1",
-    "next": "latest",
-    "next-themes": "^0.2.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-icons": "^4.4.0"
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "@next/mdx": "^13.4.6",
+    "@types/mdx": "^2.0.5",
+    "@types/node": "20.3.0",
+    "@types/react": "18.2.11",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.5",
+    "framer-motion": "^10.12.16",
+    "next": "13.4.5",
+    "next-mdx-remote": "^4.4.1",
+    "postcss": "8.4.24",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.9.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.1.3"
   },
   "devDependencies": {
     "@asce-dev/prettier-config": "^1.0.0",
-    "@tailwindcss/typography": "^0.5.4",
-    "@testing-library/jest-dom": "5.16.4",
-    "@testing-library/react": "13.2.0",
-    "@testing-library/user-event": "14.2.0",
-    "@types/markdown-it": "^12.2.3",
-    "@types/react": "18.0.9",
-    "autoprefixer": "^10.4.7",
-    "gray-matter": "^4.0.3",
-    "jest": "28.1.0",
-    "jest-environment-jsdom": "28.1.0",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.4",
-    "typescript": "4.6.4"
+    "@types/markdown-it": "^12.2.3"
   }
 }

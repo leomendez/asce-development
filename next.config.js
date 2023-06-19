@@ -1,14 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en',
-  },
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
-  images: {
-    domains: ['vercel.com', 'ibb.co'],
+  experimental: {
+    mdxRs: true,
   },
 };
 
-module.exports = nextConfig;
+const withMDX = require('@next/mdx')();
+module.exports = withMDX(nextConfig);
