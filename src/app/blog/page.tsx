@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export default function Page() {
   return (
     <main className="h-full ">
-      <div className="p-8 md:p-36 flex flex-col h-full items-start overflow-hidden">
+      <div className="p-8 md:p-36 flex flex-col h-full items-start overflow-x-hidden">
         <motion.h1
           className="text-4xl font-bold"
           initial={{ opacity: 0, scale: 0.5 }}

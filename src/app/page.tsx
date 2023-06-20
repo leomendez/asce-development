@@ -25,8 +25,8 @@ export default function Home() {
           Hey, I&apos;m <span className="text-rose-800 font-semibold">Leo</span>
         </motion.h1>
         <p className="text-slate-400 leading-8 md:w-2/3">
-          I am a Software Engineer based in Phoenix, Arizona. Currently making people awesome as a Software Engineering
-          Manager, and developing full stack with Java (Spring Boot) and TypeScript (React)
+          I am a Software Engineer based in Phoenix, Arizona. Currently making people awesome as their Software
+          Engineering Manager and developing full stack with Java (Spring Boot) and TypeScript (React)
         </p>
         <Link href="/projects">
           <motion.div
