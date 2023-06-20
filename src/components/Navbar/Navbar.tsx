@@ -27,9 +27,9 @@ export const Navbar = () => {
             gap-6 sm:gap-24 text-teal-600 text-lg
             ${navOpen ? ' flex items-center' : 'w-0 hidden'}`}
         >
-          <NavItem href="/projects" title="Projects" />
-          <NavItem href="/blog" title="Blog" />
-          <NavItem href="/contact" title="Contact" />
+          <NavItem href="/projects" title="Projects" onClick={() => setNavOpen(false)} />
+          <NavItem href="/blog" title="Blog" onClick={() => setNavOpen(false)} />
+          <NavItem href="/contact" title="Contact" onClick={() => setNavOpen(false)} />
         </div>
       </HamburgerMenu>
     </motion.div>
