@@ -1,8 +1,8 @@
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { AiOutlineArrowUp } from 'react-icons/ai';
 import { Tag } from '../Tag';
 
 type Props = {
