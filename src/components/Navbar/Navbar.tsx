@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
@@ -10,12 +9,7 @@ export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <motion.div
-      className="flex justify-between items-center py-6 px-10 md:px-36"
-      initial={{ opacity: 0, x: 400 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, ease: 'easeInOut' }}
-    >
+    <div className="flex justify-between items-center py-6 px-10 md:px-36">
       <div className="text-2xl font-semibold transition-all duration-150 hover:opacity-80 hover:scale-125">
         <Link href="/">
           <Image src="/icon.png" alt="icon" width={70} height={70} className="pink-logo" />
@@ -32,6 +26,6 @@ export const Navbar = () => {
           <NavItem href="/contact" title="Contact" onClick={() => setNavOpen(false)} />
         </div>
       </HamburgerMenu>
-    </motion.div>
+    </div>
   );
 };
