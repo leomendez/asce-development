@@ -17,7 +17,8 @@ type Props = {
 export const ProjectCard = ({ href, content, imageSrc, title, tags }: Props) => {
   return (
     <Link
-      className="flex items-center md:flex-row flex-col gap-8 group hover:cursor-pointer hover:bg-opacity-10 hover:bg-slate-400 p-4"
+      className="flex items-center md:flex-row flex-col border-2 border-slate-400 rounded-sm border-opacity-20 
+          gap-8 group hover:cursor-pointer hover:bg-opacity-10 hover:bg-slate-400 p-4"
       href={href}
       target="_blank"
     >

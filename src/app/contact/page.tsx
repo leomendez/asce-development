@@ -3,7 +3,7 @@ import { BiLinkExternal } from 'react-icons/bi';
 export default function Page() {
   return (
     <main className="h-full ">
-      <div className="p-8 md:p-64 flex flex-col h-full gap-32 items-center">
+      <div className="p-8 md:p-64 flex flex-col h-full md:gap-32 gap-8 items-center">
         <h1
           className="text-4xl font-bold"
         >

@@ -10,7 +10,7 @@ export default function Page() {
           Blog
         </h1>
         <div
-          className="text-slate-400 flex gap-16 flex-col items-center mt-20"
+          className="text-slate-400 flex gap-16 flex-col items-center md:mt-20 mt-8"
         >
           <BlogCard
             content="Some content"
