@@ -4,27 +4,11 @@ import React from 'react';
 
 export const MainHeading = () => {
   return (
-    <motion.h1
-      className="text-5xl w-40"
-      animate={{ color: ['rgb(255 255 255)', 'rgb(13 148 136)', 'rgb(255 255 255)'] }}
-      transition={{
-        duration: 8,
-        repeat: Infinity,
-        repeatDelay: 1,
-      }}
+    <h1
+      className="w-40 animate-text bg-gradient-to-r from-teal-500 via-purple-500 
+      to-orange-500 bg-clip-text text-transparent text-5xl font-black"
     >
-      Hey, I&apos;m{' '}
-      <motion.span
-        className="font-semibold"
-        animate={{ color: ['rgb(13 148 136)', 'rgb(159 18 57)', 'rgb(13 148 136)'] }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          repeatDelay: 1,
-        }}
-      >
-        Leo
-      </motion.span>
-    </motion.h1>
+      Hey, I&apos;m <span>Leo</span>
+    </h1>
   );
 };
