@@ -17,7 +17,7 @@ export const BlogCard = ({ href, content, imageSrc, title, tags }: Props) => {
   return (
     <Link
       className="flex items-center md:flex-row flex-col gap-8 group border-2 border-slate-400 rounded-sm border-opacity-20 
-          hover:cursor-pointer hover:bg-opacity-10 hover:bg-slate-400 p-4"
+          hover:cursor-pointer hover:bg-opacity-10 hover:bg-slate-400 p-4 w-full"
       href={href}
     >
       <Image

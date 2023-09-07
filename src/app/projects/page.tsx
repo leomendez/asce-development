@@ -5,7 +5,7 @@ export default function Page() {
     <main className="h-full ">
       <div className="p-8 md:p-36 flex flex-col h-full items-start overflow-hidden">
         <h1 className="text-4xl font-bold">Projects</h1>
-        <div className="mt-20 flex flex-col gap-4">
+        <div className="mt-20 flex flex-col gap-4 w-full">
           <ProjectCard
             content="Football website with stats about all football leagues in the world"
             href="https://football.asce-dev.com"
