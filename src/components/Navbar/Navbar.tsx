@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 import { NavItem } from './NavItem';
+import { usePathname } from 'next/navigation';
 
 export const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <div className="flex justify-between items-center py-6 px-10 md:px-36">
@@ -21,9 +23,14 @@ export const Navbar = () => {
             gap-6 sm:gap-24 text-teal-600 text-lg
             ${navOpen ? ' flex items-center' : 'w-0 hidden'}`}
         >
-          <NavItem href="/projects" title="Projects" onClick={() => setNavOpen(false)} />
-          <NavItem href="/blog" title="Blog" onClick={() => setNavOpen(false)} />
-          <NavItem href="/contact" title="Contact" onClick={() => setNavOpen(false)} />
+          <NavItem
+            href="/projects"
+            title="Projects"
+            active={pathname === '/projects'}
+            onClick={() => setNavOpen(false)}
+          />
+          <NavItem href="/blog" title="Blog" active={pathname === '/blog'} onClick={() => setNavOpen(false)} />
+          <NavItem href="/contact" title="Contact" active={pathname === '/contact'} onClick={() => setNavOpen(false)} />
         </div>
       </HamburgerMenu>
     </div>
