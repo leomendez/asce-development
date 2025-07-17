@@ -30,6 +30,8 @@
   },
   "devDependencies": {
     "@asce-dev/prettier-config": "^1.0.0",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.31.0",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/markdown-it": "^14.1.2"
   },
