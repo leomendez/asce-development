@@ -32,5 +32,8 @@
     "@asce-dev/prettier-config": "^1.0.0",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/markdown-it": "^14.1.2"
+  },
+  "engines": {
+    "node": "24.4.1"
   }
 }
