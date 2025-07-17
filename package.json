@@ -34,6 +34,6 @@
     "@types/markdown-it": "^14.1.2"
   },
   "engines": {
-    "node": "24.4.1"
+    "node": ">=22.0.0"
   }
 }
