@@ -1,25 +1,21 @@
-import React from 'react';
-import fs from 'fs';
-import { join } from 'path';
-import { compileMDX } from 'next-mdx-remote/rsc';
-import { H2, P } from '@/components/MDX';
+import React from "react";
+import fs from "fs";
+import { join } from "path";
+import { compileMDX } from "next-mdx-remote/rsc";
+import { H2, P } from "@/components/MDX";
 
-const postPath = join(process.cwd(), 'src/_posts');
-export default async function Page({
-  params,
-}: {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
-  const source = fs.readFileSync(join(postPath, `${params.slug}.mdx`));
+const postPath = join(process.cwd(), "src/_posts");
+export default async function Page({ params }: { params: Promise<any> }) {
+  const { slug } = await params;
+  const source = fs.readFileSync(join(postPath, `${slug}.mdx`));
 
   const { content, frontmatter } = await compileMDX<{ title: string }>({
     source,
     options: { parseFrontmatter: true },
     components: {
       h2: H2,
-      p: P
-    }
+      p: P,
+    },
   });
 
   return (

@@ -10,7 +10,7 @@ export default function HamburgerMenu({ children, navOpen, setNavOpen }: Props) 
   return (
     <>
       <div
-        className={`w-full h-[92%] absolute top-24 left-0 ${navOpen ? ' backdrop-blur-sm z-10' : ' -z-10'}`}
+        className={`w-full h-[92%] absolute top-24 left-0 ${navOpen ? ' backdrop-blur-xs z-10' : ' -z-10'}`}
         onClick={() => setNavOpen(false)}
       />
       <div
