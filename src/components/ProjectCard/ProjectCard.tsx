@@ -17,7 +17,7 @@ type Props = {
 export const ProjectCard = ({ href, content, imageSrc, title, tags }: Props) => {
   return (
     <Link
-      className="flex items-center md:flex-row flex-col border-2 border-slate-400 rounded-sm border-opacity-20 
+      className="flex items-center md:flex-row flex-col border-2 border-slate-400 rounded-xs border-opacity-20 
           gap-8 group hover:cursor-pointer hover:bg-opacity-10 hover:bg-slate-400 p-4"
       href={href}
       target="_blank"
@@ -27,7 +27,7 @@ export const ProjectCard = ({ href, content, imageSrc, title, tags }: Props) => 
         alt={title}
         width={300}
         height={200}
-        className="rounded-sm group-hover:border-slate-400 border-2 border-transparent duration-200"
+        className="rounded-xs group-hover:border-slate-400 border-2 border-transparent duration-200"
       />
       <div className="flex flex-col gap-4 h-full justify-center">
         <h2 className="text-lg font-bold group-hover:text-teal-600 flex gap-2 items-center">

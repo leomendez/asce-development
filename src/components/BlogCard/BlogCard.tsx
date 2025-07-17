@@ -16,7 +16,7 @@ type Props = {
 export const BlogCard = ({ href, content, imageSrc, title, tags }: Props) => {
   return (
     <Link
-      className="flex items-center md:flex-row flex-col gap-8 group border-2 border-slate-400 rounded-sm border-opacity-20 
+      className="flex items-center md:flex-row flex-col gap-8 group border-2 border-slate-400 rounded-xs border-opacity-20 
           hover:cursor-pointer hover:bg-opacity-10 hover:bg-slate-400 p-4 w-full"
       href={href}
     >
@@ -25,7 +25,7 @@ export const BlogCard = ({ href, content, imageSrc, title, tags }: Props) => {
         alt={title}
         width={300}
         height={200}
-        className="rounded-sm group-hover:border-slate-400 border-2 border-transparent duration-200"
+        className="rounded-xs group-hover:border-slate-400 border-2 border-transparent duration-200"
       />
       <div className="flex flex-col gap-4 h-full justify-center">
         <h2 className="text-lg font-bold group-hover:text-teal-600 flex gap-2 items-center">{title}</h2>
