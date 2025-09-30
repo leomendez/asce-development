@@ -1,0 +1,13 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#1f2937"/>
+  <rect x="50" y="50" width="200" height="100" fill="#374151" rx="8"/>
+  <rect x="70" y="70" width="40" height="30" fill="#0070f3" rx="4"/>
+  <text x="90" y="88" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Next</text>
+  <path d="M 120 85 L 140 85" stroke="#10b981" stroke-width="2" fill="none"/>
+  <path d="M 135 80 L 140 85 L 135 90" stroke="#10b981" stroke-width="2" fill="none"/>
+  <rect x="150" y="70" width="40" height="30" fill="#61dafb" rx="4"/>
+  <text x="170" y="88" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">React</text>
+  <rect x="70" y="110" width="120" height="4" fill="#6b7280" rx="2"/>
+  <rect x="70" y="120" width="100" height="4" fill="#6b7280" rx="2"/>
+  <text x="150" y="180" font-family="Arial, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Next.js Migration</text>
+</svg>
