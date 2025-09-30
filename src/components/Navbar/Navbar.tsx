@@ -29,6 +29,12 @@ export const Navbar = () => {
             active={pathname === '/projects'}
             onClick={() => setNavOpen(false)}
           />
+          <NavItem
+            href="/about"
+            title="About"
+            active={pathname === '/about'}
+            onClick={() => setNavOpen(false)}
+          />
           <NavItem href="/blog" title="Blog" active={pathname === '/blog'} onClick={() => setNavOpen(false)} />
           <NavItem href="/contact" title="Contact" active={pathname === '/contact'} onClick={() => setNavOpen(false)} />
         </div>

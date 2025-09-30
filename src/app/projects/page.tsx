@@ -7,18 +7,18 @@ export default function Page() {
         <h1 className="text-4xl font-bold">Projects</h1>
         <div className="mt-20 flex flex-col gap-4 w-full">
           <ProjectCard
-            content="Football website with stats about all football leagues in the world"
+            content="Comprehensive football statistics platform covering global leagues with real-time data visualization, built with React and TypeScript for optimal performance."
             href="https://football.asce-dev.com"
             imageSrc="/asce-football-screen.png"
             tags={['React', 'TypeScript', 'NextJS', 'Styled Components']}
             title="Asce Football"
           />
           <ProjectCard
-            content="Portfolio site"
+            content="Modern portfolio website showcasing technical projects and blog content, built with Next.js 15 and Tailwind CSS featuring responsive design and MDX integration."
             href="https://asce-dev.com"
             imageSrc="/asce-dev-screen.png"
             tags={['React', 'TypeScript', 'NextJS', 'Tailwind']}
-            title="Asce Development"
+            title="Portfolio Site"
           />
         </div>
       </div>

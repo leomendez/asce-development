@@ -40,7 +40,7 @@ export const ProjectCard = ({
           {title}
           <AiOutlineArrowUp className="rotate-45 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 duration-200" />
         </h2>
-        <p className="text-slate-400 leading-2">{content}</p>
+        <p className="text-slate-400 ">{content}</p>
         <motion.div
           className="flex flex-wrap gap-2"
           initial={{ opacity: 0, x: 400 }}

@@ -1,7 +1,7 @@
-'use client';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import React from 'react';
+"use client";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import React from "react";
 
 export const ProjectsLink = () => {
   return (
@@ -14,8 +14,9 @@ export const ProjectsLink = () => {
         }}
         whileTap={{ scale: 0.9 }}
       >
-        Check out my projects
+        View my work
       </motion.div>
     </Link>
   );
 };
+
