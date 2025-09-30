@@ -2,8 +2,8 @@ import { ProjectCard } from "@/components/ProjectCard";
 
 export default function Page() {
   return (
-    <main className="h-full pb-5">
-      <div className="p-8 md:p-36 flex flex-col h-full items-start ">
+    <main className="pb-5">
+      <div className="p-8 md:p-36 flex flex-col items-start ">
         <h1 className="text-4xl font-bold">Projects</h1>
         <div className="mt-20 flex flex-col gap-4 w-full">
           <ProjectCard

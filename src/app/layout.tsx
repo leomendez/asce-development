@@ -28,9 +28,11 @@ export default function RootLayout({
           " bg-slate-800 text-slate-300 transition-all h-full w-full  flex justify-center"
         }
       >
-        <div className="relative flex flex-col justify-between h-full lg:w-[1200px] w-full overflow--hidden">
+        <div className="relative flex flex-col min-h-screen lg:w-[1200px] w-full">
           <Navbar />
-          {children}
+          <div className="flex-1">
+            {children}
+          </div>
           <Footer />
         </div>
       </body>
