@@ -1,14 +1,20 @@
-import { AiOutlineMail, AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai';
+import {
+  AiOutlineMail,
+  AiOutlineLinkedin,
+  AiOutlineGithub,
+} from "react-icons/ai";
 
 export default function Page() {
   return (
     <main className="h-full">
       <div className="p-8 md:p-64 flex flex-col h-full md:gap-16 gap-8 items-center">
         <h1 className="text-4xl font-bold">Get In Touch</h1>
-        
+
         <div className="text-slate-400 flex gap-12 flex-col items-center">
-          <p className="text-xl text-center">Let's connect and discuss opportunities</p>
-          
+          <p className="text-xl text-center">
+            Let's connect and discuss opportunities
+          </p>
+
           <div className="flex gap-8 flex-col sm:flex-row items-center">
             <a
               href="mailto:leomenbel93@gmail.com"
@@ -16,17 +22,17 @@ export default function Page() {
             >
               <AiOutlineMail size={20} /> leomenbel93@gmail.com
             </a>
-            
+
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/leonardo-mendez-a5ba85107/"
               target="_blank"
               className="text-teal-600 flex items-center gap-2 hover:font-bold transition-all"
             >
               <AiOutlineLinkedin size={20} /> LinkedIn
             </a>
-            
+
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/leomendez"
               target="_blank"
               className="text-teal-600 flex items-center gap-2 hover:font-bold transition-all"
             >
