@@ -12,7 +12,7 @@ export default function Page() {
 
         <div className="text-slate-400 flex gap-12 flex-col items-center">
           <p className="text-xl text-center">
-            Let's connect and discuss opportunities
+            Let&apos;s connect and discuss opportunities
           </p>
 
           <div className="flex gap-8 flex-col sm:flex-row items-center">
