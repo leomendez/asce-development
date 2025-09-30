@@ -1,6 +1,6 @@
 import React from 'react';
-import { MainHeading } from './MainHeading';
-import { ProjectsLink } from './ProjectsLink';
+import { MainHeading } from '@/components/MainHeading';
+import { ProjectsLink } from '@/components/ProjectsLink';
 
 export default function Home() {
   return (
