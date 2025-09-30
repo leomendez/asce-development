@@ -1,29 +1,44 @@
-import { BiLinkExternal } from 'react-icons/bi';
+import {
+  AiOutlineMail,
+  AiOutlineLinkedin,
+  AiOutlineGithub,
+} from "react-icons/ai";
 
 export default function Page() {
   return (
-    <main className="h-full ">
-      <div className="p-8 md:p-64 flex flex-col h-full md:gap-32 gap-8 items-center">
-        <h1
-          className="text-4xl font-bold"
-        >
-          Get In Touch
-        </h1>
-        <div
-          className="text-slate-400 flex gap-16 flex-col items-center"
-        >
-          <p className="text-xl">Feel free to reach me via my socials below</p>
-          <p className="flex gap-1 flex-wrap items-center justify-center">
-            And to give credit where it is due. Please visit{' '}
-            <a
-              href="https://brittanychiang.com/"
-              target="_blank"
-              className="text-teal-600 flex items-center gap-1 hover:font-bold"
-            >
-              brittanychiang.com <BiLinkExternal />
-            </a>{' '}
-            I used her site as inspiration for this one.
+    <main className="h-full">
+      <div className="p-8 md:p-64 flex flex-col h-full md:gap-16 gap-8 items-center">
+        <h1 className="text-4xl font-bold">Get In Touch</h1>
+
+        <div className="text-slate-400 flex gap-12 flex-col items-center">
+          <p className="text-xl text-center">
+            Let&apos;s connect and discuss opportunities
           </p>
+
+          <div className="flex gap-8 flex-col sm:flex-row items-center">
+            <a
+              href="mailto:leomenbel93@gmail.com"
+              className="text-teal-600 flex items-center gap-2 hover:font-bold transition-all"
+            >
+              <AiOutlineMail size={20} /> leomenbel93@gmail.com
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/leonardo-mendez-a5ba85107/"
+              target="_blank"
+              className="text-teal-600 flex items-center gap-2 hover:font-bold transition-all"
+            >
+              <AiOutlineLinkedin size={20} /> LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/leomendez"
+              target="_blank"
+              className="text-teal-600 flex items-center gap-2 hover:font-bold transition-all"
+            >
+              <AiOutlineGithub size={20} /> GitHub
+            </a>
+          </div>
         </div>
       </div>
     </main>
