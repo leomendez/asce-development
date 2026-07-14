@@ -9,7 +9,7 @@ type Props = {
   href: string;
   title: string;
   content: string;
-  imageSrc: string;
+  imageSrc?: string;
   tags: string[];
 };
 
@@ -20,18 +20,20 @@ export const BlogCard = ({ href, content, imageSrc, title, tags }: Props) => {
           hover:cursor-pointer hover:bg-slate-400/10 p-4 w-full"
       href={href}
     >
-      <Image
-        src={imageSrc}
-        alt={title}
-        width={300}
-        height={200}
-        className="rounded-xs group-hover:border-slate-400 border-2 border-transparent duration-200"
-      />
+      {imageSrc && (
+        <Image
+          src={imageSrc}
+          alt={title}
+          width={300}
+          height={200}
+          className="rounded-xs group-hover:border-slate-400 border-2 border-transparent duration-200"
+        />
+      )}
       <div className="flex flex-col gap-4 h-full justify-center">
         <h2 className="text-lg font-bold group-hover:text-teal-600 flex gap-2 items-center">
           {title}
         </h2>
-        <p className="text-slate-400 leading-2">{content}</p>
+        <p className="text-slate-400 leading-relaxed">{content}</p>
         <motion.div
           className="flex flex-wrap gap-2"
           initial={{ opacity: 0, x: 400 }}

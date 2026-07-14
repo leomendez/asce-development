@@ -1,0 +1,66 @@
+---
+title: 'Relay State: Stepping Outside My React Bubble'
+metaTitle: 'Relay State: Stepping Outside My React Bubble'
+metaDesc: 'How a state synchronization problem across microfrontends pushed me outside my React comfort zone and into my first open source library, relay-state.'
+date: '2026-07-14'
+tags:
+  - react
+  - single-spa
+  - microfrontends
+  - open-source
+---
+
+I have been working with React for almost 10 years now. I think I understand it well at a general level, and I am confident I can figure out how to solve any UI need using it. However, I still feel like only a React developer, and it has been hard for me to step outside of that comfort zone. So here comes a problem that forced me to think outside of my React bubble and realize that I actually understand things more deeply than I give myself credit for.
+
+In February I started a new job at a company called Cognite. I am now part of their Atlas team, and we are in charge of the Atlas AI product. Given my experience in the UI, I became part of the Agent Experience team. We are trying to solve for a persistent AI agent that lives across our application. Seems simple enough, but we quickly started running into state synchronization issues. The whole picture is that we have a huge application composed of many, many sub applications using a microfrontend architecture and leveraging the [single-spa](https://single-spa.js.org/) library. I have absolutely no experience with this library, but I am comfortable with the concept of state in the browser, especially within React.
+
+Given those architectural constraints, we set up our application as another one of these subapps, with the difference that it is mounted as a sibling of the main subapp, similar to our navigation solution. This is roughly what it looks like:
+
+```tsx
+<body>
+	<nav />
+	<subapp />
+	<persistentAgent />
+</body>
+```
+
+We use React Router for our navigation, but our persistent agent sub application is set up with React Router's memory router, which keeps its navigation history in memory and never reads or writes the browser URL. That gives us another constraint: we cannot share state across the subapps through the URL. React state and context are of course out of the question, since each sub application runs isolated, served from a CDN as its own bundle. With that, we landed on the decision to use a pub sub event bus that writes events to the window object in the browser, which the sub applications then subscribe to and react to accordingly.
+
+In theory this is sound, and it is actually what the single-spa documentation recommends. I, however, found this extremely clunky and fragile. It made it so state changes are not reactive unless you add a bunch of boilerplate in each sub application, and in the persistent agent sub app as well. To listen to a single value, every subapp ends up with something like this:
+
+```tsx
+function useAgentContext() {
+	const [context, setContext] = useState(window.__agentContext);
+
+	useEffect(() => {
+		const handler = (event: CustomEvent) => setContext(event.detail);
+		window.addEventListener("agent:context-changed", handler);
+		return () => window.removeEventListener("agent:context-changed", handler);
+	}, []);
+
+	return context;
+}
+```
+
+And that is the happy path. It can still miss updates that happen before the component mounts, so you also need to read the current value from somewhere on mount. Multiply that by every piece of shared state and every sub application, and it adds up fast. I wanted to find a fully reactive solution with minimal boilerplate.
+
+That took my mind to finding something like Jotai to manage our cross application reactive state. I have worked with Jotai in the past and love its API, and how similar it is to the React state API. At Cognite, however, we decided to use Zustand for cross component/complex state. Not too familiar with that library, I started reading superficially about it. I came to the conclusion that, given that each sub application has its own bundle, each would also have its own instance of a Zustand store, and that would become problematic if the sub apps our agent app is interacting with are running a different version. For example, if the main subapp ships with v1.2 of a shared store package and our agent app ships with v1.3, those are two separate store instances in memory, and a state update in one is completely invisible to the other.
+
+With all that, I decided to explore what solutions are out there for sharing state across sub apps in the single-spa ecosystem. To my surprise, there was absolutely nothing out there. I also found out that the library hasn't seen any updates in several months, which is a problem for another time. Here is where it all comes back to my learning moment. I decided to give it a shot at finding a solution and exploring what open source feels like. I came up with an enhanced event bus combined with an in-memory cache on the browser window object, and paired that with the `useSyncExternalStore` hook from React to allow for a simple API. I also took the interface of Jotai and made that the interface for my state hooks. That became [relay-state](https://github.com/leomendez/relay-state). The cache is what makes the event bus enhanced: a subscriber that mounts late reads the current value straight from the cache instead of waiting for the next event, which solves exactly the missed-updates problem from the boilerplate above. With it, all that boilerplate collapses into a single hook that works from any sub application:
+
+```tsx
+import { useRelayState } from "relay-state/react";
+
+function AgentPanel() {
+	const [context, setContext] = useRelayState<AgentContext>("agent-context");
+	// ...
+}
+```
+
+Under the hood it is still browser events and a window cache, but `useSyncExternalStore` handles the subscription lifecycle and the initial read, so components stay in sync no matter when they mount or which bundle they live in.
+
+I shared that with my team, and proposed an internal solution that was similar to the relay-state open source library. What is great about working with a talented team is that everyone has their own ideas. One of my coworkers had also been running into similar issues with the state synchronization and had been following my solution closely. The difference for him was that he was extremely comfortable with Zustand, having worked with that library in the past. He took what I started and created a Zustand store that persists to a singleton on the browser window, which completely solves the multi version issue that I had run into. I handed over my progress, and he finished it up with his Zustand solution, which made our application much more resilient. We stopped running into the annoying state bugs that we had been patching for weeks with many useEffects across the multiple sub applications. Overall, a great win for the team.
+
+Looking back, both solutions rely on the same core insight: the window object is the one thing that exists exactly once per browser tab, no matter how many bundles are loaded. My event bus and his Zustand store are just different reactivity layers on top of that shared namespace. Zustand itself never failed. Sharing module instances across bundles did.
+
+I still think there is a place for relay-state in the single-spa ecosystem, though. It is a very lightweight library that uses browser APIs to handle that cross sub app state issue, and it also has a familiar interface for React developers. I also appreciate it being my first step into open source, and I am anxiously waiting to see if there will ever be anyone that responds to my [post](https://github.com/single-spa/single-spa/discussions/1365). This was a great learning experience, and I hope it serves as an example to step outside of your comfort zone and explore things that seem scary, but that come with a huge upside of learning opportunities.
