@@ -2,6 +2,7 @@ import "./globals.css";
 import { Roboto } from "next/font/google";
 import { Footer, Navbar } from "@/components";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -35,6 +36,7 @@ export default function RootLayout({
           </div>
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
