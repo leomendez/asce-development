@@ -36,3 +36,9 @@ next-env.d.ts
 
 # IDE
 /.vscode/
+
+# generated search index — rebuilt by `pnpm index` on every build
+/public/corpus.json
+
+# stray Windows alternate-data-stream artifacts
+*:Zone.Identifier

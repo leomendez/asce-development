@@ -4,14 +4,19 @@
   "private": true,
   "main": "src/app/page.tsx",
   "scripts": {
-    "dev": "next dev",
+    "dev": "pnpm index && next dev",
+    "prebuild": "pnpm index",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "index": "tsx scripts/build-index.ts",
+    "calibrate": "tsx scripts/calibrate.ts",
+    "test": "tsx scripts/test-retrieval.ts",
+    "lint": "eslint src scripts"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
+    "@mlc-ai/web-llm": "^0.2.84",
     "@next/mdx": "^16.2.9",
     "@types/mdx": "^2.0.14",
     "@types/node": "^26.0.0",
@@ -21,6 +26,7 @@
     "eslint": "^10.5.0",
     "eslint-config-next": "16.2.9",
     "framer-motion": "^12.40.0",
+    "minisearch": "^7.2.0",
     "next": "16.2.9",
     "next-mdx-remote": "^6.0.0",
     "postcss": "^8.5.15",
@@ -35,7 +41,9 @@
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "^10.0.1",
     "@tailwindcss/postcss": "^4.3.1",
-    "@types/markdown-it": "^14.1.2"
+    "@types/markdown-it": "^14.1.2",
+    "gray-matter": "^4.0.3",
+    "tsx": "^4.23.5"
   },
   "engines": {
     "node": ">=22.0.0"
