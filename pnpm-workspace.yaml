@@ -1,6 +1,0 @@
-allowBuilds:
-  esbuild: false
-  sharp: set this to true or false
-  unrs-resolver: set this to true or false
-minimumReleaseAgeExclude:
-  - tsx@4.23.5
