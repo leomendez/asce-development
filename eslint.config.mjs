@@ -1,22 +1,21 @@
 import { defineConfig } from "eslint/config";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+import coreWebVitals from "eslint-config-next/core-web-vitals";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-export default defineConfig([{
-    extends: compat.extends("next/core-web-vitals"),
-
+// eslint-config-next v16 ships a native flat config, so it is spread directly.
+// Wrapping it in FlatCompat (the previous approach) crashes ESLint 10 with
+// "Converting circular structure to JSON".
+export default defineConfig([
+  ...coreWebVitals,
+  {
+    ignores: [".next/**", "node_modules/**", "public/**"],
+  },
+  {
+    // Pinned explicitly: eslint-plugin-react's auto-detection calls
+    // context.getFilename(), removed in ESLint 10, and crashes the run.
+    settings: { react: { version: "19.2" } },
     rules: {
-        "react/jsx-uses-react": 0,
-        "react/react-in-jsx-scope": 0,
+      "react/jsx-uses-react": 0,
+      "react/react-in-jsx-scope": 0,
     },
-}]);
+  },
+]);

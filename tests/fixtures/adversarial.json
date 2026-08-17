@@ -1,0 +1,15 @@
+{
+  "_comment": "Off-corpus questions built deliberately from vocabulary that IS in the chunk `keywords` strings (work, made, created, company, projects, built, current, skills, degree, hire), about subjects the corpus does not cover. The main offCorpus set shares no vocabulary with the corpus, so it cannot detect keyword-driven false positives. Scored by `pnpm calibrate`; not a pass/fail gate — see the LEAK markers.",
+  "questions": [
+    { "q": "What has he created in Rust?" },
+    { "q": "What work has he made for Google?" },
+    { "q": "Which company will he join next?" },
+    { "q": "What tools does he use for cooking?" },
+    { "q": "What projects has he built in Go?" },
+    { "q": "What did he write about Kubernetes?" },
+    { "q": "Can I hire him to build a house?" },
+    { "q": "What degree does his brother have?" },
+    { "q": "What is his current salary at this company?" },
+    { "q": "What skills does he have in machine learning?" }
+  ]
+}
